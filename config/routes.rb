@@ -2,6 +2,13 @@ SimpleApp::Application.routes.draw do
   resources :users
   #get "users/new"
   resources :sessions, only: [:new, :create, :destroy]
+<<<<<<< HEAD
+=======
+  
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+>>>>>>> sign-in-out
 
   root to: 'static_pages#home'
 
